@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página Web - Diseño Flexbox</title>
+  <link rel="stylesheet" href="style 3.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">🐻 Práctica HTML & CSS</div>
+    <ul class="nav-links">
+      <li><a href="#enlaces">1. Enlaces</a></li>
+      <li><a href="#listas">2. Listas</a></li>
+      <li><a href="#tabla">3. Tabla</a></li>
+      <li><a href="#contacto">4. Contacto</a></li>
+    </ul>
+  </nav>
+
+
+  <header class="hero">
+    <div class="hero-content">
+      <span class="badge">Guía 3 · Actividad 1</span>
+      <h1>Creación de cuarto ejercicio con HTML</h1>
+      <p>
+        Esta es una página desarrollada para poner en práctica la estructura básica de maquetación moderna con Flexbox.
+      </p>
+    </div>
+  </header>
+
+  <!-- Contenedor principal -->
+  <main class="container">
+
+    <!-- 1. Enlaces e Imágenes (Flex Row) -->
+    <section id="enlaces" class="card section-media">
+      <div class="media-text">
+        <h2>1. Enlaces e Imágenes</h2>
+        <p>
+          A continuación se muestra una imagen de un osito (decorativa) integrada en un contenedor flexible
+          junto con un enlace externo que te llevara a una pagina con informacion sobre osos.
+        </p>
+        <p class="info-link">
+          Puedes visitar el sitio web del
+          <a href="https://www.nationalgeographic.com.es/animales/osos" target="_blank" rel="noopener noreferrer" class="btn-osos">
+            osos ↗
+          </a>
+          para más información.
+        </p>
+      </div>
+
+      <div class="media-img-box">
+        
+        <img src="descarga.png" alt="Ilustración de oso con ramo de flores sobre fondo de cuadros" />
+      </div>
+    </section>
+
+   
+    <section id="listas" class="section-lists">
+      <h2 class="section-title">2. Listas de Ejemplo</h2>
+
+      <div class="lists-wrapper">
+        <article class="card list-card">
+          <h3>Lista no ordenada</h3>
+          <p class="subtitle">Tecnologías de desarrollo web:</p>
+          <ul class="custom-ul">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+          </ul>
+        </article>
+
+        <article class="card list-card">
+          <h3>Lista ordenada</h3>
+          <p class="subtitle">Pasos para crear un sitio web:</p>
+          <ol class="custom-ol">
+            <li>Diseñar la estructura en HTML.</li>
+            <li>Aplicar estilos visuales con CSS.</li>
+            <li>Agregar interactividad con JavaScript.</li>
+          </ol>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3 y 4. Tabla de Datos + Formulario en un contenedor Flex -->
+    <div class="bottom-grid">
+      
+      <!-- 3. Tabla de Datos -->
+      <section id="tabla" class="card table-section">
+        <h2>3. Tabla de Datos</h2>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Módulo</th>
+                <th>Estado</th>
+                <th>Horas de Estudio</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Estructura HTML</td>
+                <td><span class="status done">Completado</span></td>
+                <td>10 horas</td>
+              </tr>
+              <tr>
+                <td>Estilos CSS</td>
+                <td><span class="status progress">En progreso</span></td>
+                <td>15 horas</td>
+              </tr>
+              <tr>
+                <td>Lógica JavaScript</td>
+                <td><span class="status pending">Pendiente</span></td>
+                <td>20 horas</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 4. Formulario de Contacto -->
+      <section id="contacto" class="card form-section">
+        <h2>4. Formulario de Contacto</h2>
+        <form class="flex-form">
+          <div class="form-group">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" placeholder="Escribe tu nombre" required />
+          </div>
+
+          <div class="form-group">
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" placeholder="ejemplo@correo.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="mensaje">Mensaje o comentarios:</label>
+            <textarea id="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Enviar Formulario</button>
+        </form>
+      </section>
+
+    </div>
+  </main>
+<!-- Cuadro de informacion de contacto-->
+  <footer class="footer">
+    <p>Desarrollado con HTML5 & CSS Flexbox · Actividad Práctica</p>
+  </footer>
+
+</body>
+</html>

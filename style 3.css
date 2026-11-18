@@ -1,0 +1,358 @@
+/* Variables de color inspiradas en tu diseño original */
+:root {
+  --bg-main: #9b7653;        /* Marrón cálido de fondo */
+  --bg-dark: #5c4028;        /* Marrón oscuro para contraste */
+  --card-cream: #fae3b4;     /* Crema suave de tus listas */
+  --card-white: #fffdf9;     /* Blanco cálido */
+  --accent-gold: #c68b17;    /* Dorado de tu tabla y botón */
+  --accent-hover: #a4700e;
+  --text-dark: #2e2014;
+  --text-muted: #5e4936;
+  --radius: 16px;
+  --shadow: 0 10px 25px rgba(46, 32, 20, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* --- NAVBAR CON FLEXBOX --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background-color: var(--bg-dark);
+  color: var(--card-cream);
+  padding: 1rem 5%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: var(--card-cream);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #ffd175;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 3.5rem 5% 2rem;
+}
+
+.hero-content {
+  max-width: 760px;
+  background: rgba(255, 253, 249, 0.14);
+  backdrop-filter: blur(6px);
+  padding: 2rem;
+  border-radius: var(--radius);
+  border: 1px solid rgba(250, 227, 180, 0.35);
+}
+
+.badge {
+  display: inline-block;
+  background-color: var(--accent-gold);
+  color: #fff;
+  padding: 0.25rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  color: var(--card-white);
+  margin-bottom: 0.75rem;
+}
+
+.hero p {
+  color: var(--card-cream);
+  font-size: 1.05rem;
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 1.5rem 5% 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.card {
+  background-color: var(--card-white);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+h2 {
+  color: var(--bg-dark);
+  border-bottom: 2px solid var(--card-cream);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.45rem;
+}
+
+/* --- 1. SECCIÓN ENLACES E IMÁGENES (FLEX ROW) --- */
+.section-media {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.media-text {
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.info-link {
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.btn-sena {
+  display: inline-block;
+  background-color: var(--accent-gold);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.3rem 0.85rem;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-sena:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+.media-img-box {
+  flex: 0 1 280px;
+  margin: 0 auto;
+}
+
+.media-img-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+  border: 4px solid var(--card-cream);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.media-img-box img:hover {
+  transform: scale(1.03) rotate(-1deg);
+}
+
+/* --- 2. LISTAS PARALELAS CON FLEXBOX --- */
+.section-title {
+  color: var(--card-white);
+  border-bottom-color: rgba(250, 227, 180, 0.4);
+}
+
+.lists-wrapper {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.list-card {
+  flex: 1 1 300px;
+  background-color: var(--card-cream);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+.list-card:hover {
+  transform: translateY(-4px);
+}
+
+.list-card h3 {
+  color: var(--bg-dark);
+  font-size: 1.25rem;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.custom-ul,
+.custom-ol {
+  padding-left: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* --- 3 Y 4. TABLA + FORMULARIO LADO A LADO --- */
+.bottom-grid {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.table-section {
+  flex: 1 1 440px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section {
+  flex: 1 1 380px;
+}
+
+/* Estilos de Tabla */
+.table-responsive {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: var(--accent-gold);
+  color: #fff;
+}
+
+th, td {
+  padding: 0.9rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eed9b7;
+}
+
+tbody tr {
+  background-color: #fff6e5;
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--card-cream);
+}
+
+/* Etiquetas de estado */
+.status {
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.status.done { background: #d4edda; color: #155724; }
+.status.progress { background: #fff3cd; color: #856404; }
+.status.pending { background: #f8d7da; color: #721c24; }
+
+/* Formulario con Flexbox */
+.flex-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--bg-dark);
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.75rem 0.9rem;
+  border: 1.5px solid #dec39d;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  background-color: #fffcf7;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-gold);
+}
+
+.btn-submit {
+  background-color: var(--accent-gold);
+  color: #fff;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.15s;
+}
+
+.btn-submit:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+/* --- FOOTER --- */
+.footer {
+  background-color: var(--bg-dark);
+  color: var(--card-cream);
+  text-align: center;
+  padding: 1.25rem;
+  font-size: 0.9rem;
+}

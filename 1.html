@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Primera Página Web</title>
+    <!-- Enlace al archivo de estilos CSS -->
+    <link rel="stylesheet" href="style 1.css">
+</head>
+<body>
+
+    <!-- Encabezado principal (h1) -->
+    <h1>Creacion de tercer ejercicio con HTML</h1>
+
+    <p>Esta es una página desarrollada para poner en práctica la estructura básica de HTML, aplicando diversas etiquetas y atributos aprendidos.</p>
+
+    <!-- Subtítulo de sección (h2) -->
+    <h2>1. Enlaces e Imágenes</h2>
+    <p>A continuación se muestra una imagen y un enlace externo de prueba:</p>
+
+    <!-- Imagen con atributos src y alt -->
+    <img src="descarga.png" alt="osito con flores" width="300">
+
+    <p>
+        <!-- Enlace con atributo href y target -->
+        Puedes visitar el sitio web del <a href="https://www.sena.edu.co" target="_blank">SENA</a> para más información.
+    </p>
+
+    <h2>2. Listas de Ejemplo</h2>
+    
+    <!-- Lista no ordenada -->
+    <h3>Lista no ordenada (Tecnologías de desarrollo web):</h3>
+    <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <!-- Lista ordenada -->
+    <h3>Lista ordenada (Pasos para crear un sitio web):</h3>
+    <ol>
+        <li>Diseñar la estructura en HTML.</li>
+        <li>Aplicar estilos visuales con CSS.</li>
+        <li>Agregar interactividad con JavaScript.</li>
+    </ol>
+
+    <h2>3. Tabla de Datos</h2>
+    <!-- Tabla estructurada con filas (tr), encabezados (th) y celdas (td) -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Módulo</th>
+                <th>Estado</th>
+                <th>Horas de Estudio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Estructura HTML</td>
+                <td>Completado</td>
+                <td>10 horas</td>
+            </tr>
+            <tr>
+                <td>Estilos CSS</td>
+                <td>En progreso</td>
+                <td>15 horas</td>
+            </tr>
+            <tr>
+                <td>Lógica JavaScript</td>
+                <td>Pendiente</td>
+                <td>20 horas</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>4. Formulario de Contacto</h2>
+    <!-- Formulario básico con diferentes tipos de input, label y button -->
+    <form action="#" method="POST">
+        <div>
+            <label for="nombre">Nombre completo:</label><br>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+        </div>
+        <br>
+        <div>
+            <label for="correo">Correo electrónico:</label><br>
+            <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+        </div>
+        <br>
+        <div>
+            <label for="mensaje">Mensaje o comentarios:</label><br>
+            <textarea id="mensaje" name="mensaje" rows="4" cols="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+        </div>
+        <br>
+        <button type="submit">Enviar Formulario</button>
+    </form>
+
+</body>
+</html>

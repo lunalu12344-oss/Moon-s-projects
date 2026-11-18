@@ -1,0 +1,332 @@
+:root {
+  --bg-tierra: #9b7653;
+  --bg-oscuro: #5c4028;
+  --crema: #fae3b4;
+  --blanco-calido: #fffdf9;
+  --dorado: #c68b17;
+  --dorado-hover: #a3700d;
+  --texto: #2e2014;
+  --radio: 16px;
+  --sombra: 0 10px 24px rgba(46, 32, 20, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-tierra);
+  color: var(--texto);
+  line-height: 1.6;
+  padding: 1.5rem;
+}
+
+/* =========================================================
+   1. CONTENEDOR GRID, FILAS, COLUMNAS, GAP Y ÁREAS
+   ========================================================= */
+.grid-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  /* Activación de CSS Grid */
+  display: grid;
+
+  /* Definición de 3 columnas: izquierda fija/proporcional y dos columnas amplias */
+  grid-template-columns: 1.1fr 1fr 1fr;
+
+  /* Definición de filas automáticas ajustadas al contenido */
+  grid-template-rows: auto auto auto auto;
+
+  /* Separación uniforme entre filas y columnas */
+  gap: 1.5rem;
+
+  /* Distribución visual por áreas nombradas */
+  grid-template-areas:
+    "header   header   header"
+    "media    listas   listas"
+    "media    tabla    tabla"
+    "contacto contacto contacto"
+    "footer   footer   footer";
+}
+
+/* =========================================================
+   2. UBICACIÓN DE ELEMENTOS DENTRO DE LA CUADRÍCULA
+   ========================================================= */
+.area-header   { grid-area: header; }
+.area-media    { grid-area: media; }
+.area-listas   { grid-area: listas; }
+.area-tabla    { grid-area: tabla; }
+.area-contacto { grid-area: contacto; }
+.area-footer   { grid-area: footer; }
+
+/* Tarjetas generales */
+.card {
+  background-color: var(--blanco-calido);
+  border-radius: var(--radio);
+  padding: 1.75rem;
+  box-shadow: var(--sombra);
+}
+
+h2 {
+  color: var(--bg-oscuro);
+  border-bottom: 2px solid var(--crema);
+  padding-bottom: 0.45rem;
+  margin-bottom: 1.1rem;
+  font-size: 1.35rem;
+}
+
+/* --- ESTILOS DEL HEADER Y NAVEGACIÓN GRID --- */
+.area-header {
+  background-color: var(--bg-oscuro);
+  color: var(--crema);
+  padding: 2rem;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  display: grid;
+  gap: 0.8rem;
+}
+
+.header-top {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+.badge {
+  background-color: var(--dorado);
+  color: #fff;
+  padding: 0.25rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.grid-nav {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: end;
+  gap: 1.5rem;
+}
+
+.grid-nav a {
+  color: var(--crema);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.grid-nav a:hover {
+  color: #ffd175;
+}
+
+.area-header h1 {
+  color: #fff;
+  font-size: 2rem;
+}
+
+/* --- SECCIÓN 1: ENLACES E IMÁGENES (Columna lateral extendida en 2 filas) --- */
+.area-media {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  gap: 1rem;
+  align-content: start;
+}
+
+.media-box {
+  display: grid;
+  place-items: center;
+  background-color: var(--crema);
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.media-box img {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 10px;
+  border: 3px solid #fff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.btn-sena {
+  display: inline-block;
+  background-color: var(--dorado);
+  color: #fff;
+  padding: 0.2rem 0.7rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.btn-sena:hover {
+  background-color: var(--dorado-hover);
+}
+
+/* --- SECCIÓN 2: SUB-GRID PARA LAS LISTAS --- */
+.subgrid-listas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.lista-caja {
+  background-color: var(--crema);
+  padding: 1.25rem;
+  border-radius: 12px;
+}
+
+.lista-caja h3 {
+  color: var(--bg-oscuro);
+  margin-bottom: 0.3rem;
+}
+
+.subtitulo {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #5e4936;
+  margin-bottom: 0.75rem;
+}
+
+.lista-caja ul,
+.lista-caja ol {
+  padding-left: 1.3rem;
+  display: grid;
+  gap: 0.4rem;
+}
+
+/* --- SECCIÓN 3: TABLA DE DATOS --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: var(--dorado);
+  color: #fff;
+}
+
+th, td {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eed9b7;
+}
+
+tbody tr {
+  background-color: #fff6e5;
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--crema);
+}
+
+.tag {
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.done { background: #d4edda; color: #155724; }
+.progress { background: #fff3cd; color: #856404; }
+.pending { background: #f8d7da; color: #721c24; }
+
+/* --- SECCIÓN 4: FORMULARIO CON GRID DE 2 COLUMNAS --- */
+.grid-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+
+.campo {
+  display: grid;
+  gap: 0.4rem;
+}
+
+/* Ubicación explícita ocupando desde la columna 1 hasta la 3 */
+.campo-ancho {
+  grid-column: 1 / 3;
+}
+
+.campo label {
+  font-weight: 600;
+  color: var(--bg-oscuro);
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1.5px solid #dec39d;
+  border-radius: 10px;
+  font-family: inherit;
+  background-color: #fffcf7;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  outline: none;
+  border-color: var(--dorado);
+}
+
+.btn-enviar {
+  grid-column: 1 / 3;
+  background-color: var(--dorado);
+  color: #fff;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-enviar:hover {
+  background-color: var(--dorado-hover);
+}
+
+/* --- FOOTER --- */
+.area-footer {
+  background-color: var(--bg-oscuro);
+  color: var(--crema);
+  text-align: center;
+  padding: 1.1rem;
+  border-radius: var(--radio);
+  font-size: 0.9rem;
+}
+
+/* =========================================================
+   3. DISEÑO RESPONSIVO (Adaptación en pantallas pequeñas)
+   ========================================================= */
+@media (max-width: 860px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "media"
+      "listas"
+      "tabla"
+      "contacto"
+      "footer";
+  }
+
+  .header-top,
+  .subgrid-listas,
+  .grid-form {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-nav {
+    justify-content: start;
+  }
+
+  .campo-ancho,
+  .btn-enviar {
+    grid-column: 1 / 2;
+  }
+}

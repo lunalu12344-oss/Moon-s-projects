@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página Web - Diseño CSS Grid</title>
+  <link rel="stylesheet" href="style 5.css" />
+</head>
+<body>
+
+
+  <div class="grid-layout">
+
+    <header class="area-header">
+      <div class="header-top">
+        <span class="badge">Guía 3 · Actividad 1 responsive</span>
+        <nav class="grid-nav">
+          <a href="#enlaces">1. Enlaces</a>
+          <a href="#listas">2. Listas</a>
+          <a href="#tabla">3. Tabla</a>
+          <a href="#contacto">4. Contacto</a>
+        </nav>
+      </div>
+      <h1>Creación de sexto ejercicio con HTML</h1>
+      <p>
+        Esta es una página desarrollada para poner en práctica la estructura básica responsive para todos los dispositivos.
+      </p>
+    </header>
+
+
+    <section id="enlaces" class="card area-media">
+      <h2>1. Enlaces e Imágenes</h2>
+      <p>A continuación se muestra una imagen y un enlace externo de prueba que te llevara a una pagina de informacion de osos.:</p>
+
+      <div class="media-box">
+
+        <img src="descarga.png" alt="Ilustración de oso con flores sobre fondo de cuadros" />
+      </div>
+
+      <p class="link-text">
+        Puedes visitar el sitio web del
+        <a href="https://www.nationalgeographic.com.es/animales/osos" target="_blank" rel="noopener noreferrer" class="btn-osos">
+            osos ↗
+        </a>
+        para más información.
+      </p>
+    </section>
+
+    <section id="listas" class="card area-listas">
+      <h2>2. Listas de Ejemplo</h2>
+
+      <div class="subgrid-listas">
+        <div class="lista-caja">
+          <h3>Lista no ordenada</h3>
+          <p class="subtitulo">Tecnologías de desarrollo web:</p>
+          <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
+
+        <div class="lista-caja">
+          <h3>Lista ordenada</h3>
+          <p class="subtitulo">Pasos para crear un sitio web:</p>
+          <ol>
+            <li>Diseñar la estructura en HTML.</li>
+            <li>Aplicar estilos visuales con CSS.</li>
+            <li>Agregar interactividad con JavaScript.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ÁREA 4: TABLA DE DATOS -->
+    <section id="tabla" class="card area-tabla">
+      <h2>3. Tabla de Datos</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Módulo</th>
+            <th>Estado</th>
+            <th>Horas de Estudio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Estructura HTML</td>
+            <td><span class="tag done">Completado</span></td>
+            <td>10 horas</td>
+          </tr>
+          <tr>
+            <td>Estilos CSS</td>
+            <td><span class="tag progress">En progreso</span></td>
+            <td>15 horas</td>
+          </tr>
+          <tr>
+            <td>Lógica JavaScript</td>
+            <td><span class="tag pending">Pendiente</span></td>
+            <td>20 horas</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ÁREA 5: FORMULARIO DE CONTACTO -->
+    <section id="contacto" class="card area-contacto">
+      <h2>4. Formulario de Contacto</h2>
+      <form class="grid-form">
+        <div class="campo">
+          <label for="nombre">Nombre completo:</label>
+          <input type="text" id="nombre" placeholder="Escribe tu nombre" required />
+        </div>
+
+        <div class="campo">
+          <label for="correo">Correo electrónico:</label>
+          <input type="email" id="correo" placeholder="ejemplo@correo.com" required />
+        </div>
+
+        <!-- Este campo abarca 2 columnas en pantallas grandes -->
+        <div class="campo campo-ancho">
+          <label for="mensaje">Mensaje o comentarios:</label>
+          <textarea id="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-enviar">Enviar Formulario</button>
+      </form>
+    </section>
+
+    <!-- ÁREA 6: FOOTER -->
+    <footer class="area-footer">
+      <p>Maquetado con CSS Grid Layout · Estructura por Filas, Columnas y Áreas</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
